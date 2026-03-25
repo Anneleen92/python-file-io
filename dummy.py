@@ -9,7 +9,7 @@ with open('dummy.txt', 'r') as in_stream:
             word_list = line.split()
             word_list.sort()
             for word in word_list:
-                out_stream.write(f'{line_index}\t{word}\n')
+                out_stream.write(f'Line: {line_index}\t{word}\n')
 print("Done!")
 print('dummy.txt is closed?', in_stream.closed)
 print('output.txt is closed?', out_stream.closed)
