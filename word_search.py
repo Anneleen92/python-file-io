@@ -8,3 +8,15 @@ if __name__ == '__main__':
 
     input_file = "origin.txt"
     output_file = "herit_results.txt"
+
+    results = []
+    with open(input_file, "r", encoding="utf-8", errors="replace") as fh:
+        for line_num, line in enumerate(fh, start=1):
+            for match in herit_pattern.finditer(line):
+                results.append((line_num, match.group()))
+
+    with open(output_file, "w", encoding="utf-8") as out:
+        for line_num, word in results:
+            out.write(f"{line_num}\t{word}\n")
+
+
