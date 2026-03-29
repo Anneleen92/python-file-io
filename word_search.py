@@ -19,4 +19,4 @@ if __name__ == '__main__':
         for line_num, word in results:
             out.write(f"{line_num}\t{word}\n")
 
-
+    print(f"Found {len(results)} match(es). Results saved to '{output_file}'.")
